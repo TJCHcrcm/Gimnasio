@@ -7,17 +7,30 @@ namespace Gimnasio.Dominio.Entidades
 {
     public class Rutina
     {
+        #region
+        //propiedades
         public int id_rutina { get; set; }
-        public int nro_repeticiones { get; set; }
         public string descripcion_rutina { get; set; }
 
-        public static Rutina crear(string descripcion)
+        #endregion
+        #region constructor
+        private Rutina() {
+        }
+        #endregion
+        #region metodos
+        public static Rutina crear( int ai_id_rutina, string ai_descripcion_rutina)
         {
             return new Rutina()
             {
-
-                descripcion_rutina = descripcion
+                id_rutina = ai_id_rutina,
+                descripcion_rutina = ai_descripcion_rutina
             };
         }
+        public void ModificarRutina(string as_nueva_descripcion)
+        {
+            descripcion_rutina = as_nueva_descripcion;
+        }
     }
+        #endregion
+    
 }
