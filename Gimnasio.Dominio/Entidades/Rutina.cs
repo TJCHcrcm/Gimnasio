@@ -5,32 +5,30 @@ using System.Text;
 
 namespace Gimnasio.Dominio.Entidades
 {
-    public class Rutina
+    class Rutina
     {
-        #region
-        //propiedades
-        public int id_rutina { get; set; }
-        public string descripcion_rutina { get; set; }
+        public int ID_Rutina { get; private set; }
 
-        #endregion
-        #region constructor
-        private Rutina() {
-        }
-        #endregion
-        #region metodos
-        public static Rutina crear( int ai_id_rutina, string ai_descripcion_rutina)
-        {
-            return new Rutina()
-            {
-                id_rutina = ai_id_rutina,
-                descripcion_rutina = ai_descripcion_rutina
+        public String Descripion_Rutina{ get; set; }
+
+        private Rutina() { }
+
+
+        public static Rutina Crear(String descripion_rutin) {
+
+            return new Rutina() {
+                Descripion_Rutina = descripion_rutin
+
             };
+
         }
-        public void ModificarRutina(string as_nueva_descripcion)
+
+        public void Modificar_Rutina(String n_descripcion_rutina)
+
         {
-            descripcion_rutina = as_nueva_descripcion;
+            Descripion_Rutina = n_descripcion_rutina;
         }
+
+
     }
-        #endregion
-    
 }
