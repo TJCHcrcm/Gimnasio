@@ -7,7 +7,7 @@ namespace Gimnasio.Dominio.Entidades
 {
     class Administrador
     {
-        #region Propiedades
+        #region PROPIEDADES
 
         public int id_tipo_usuario { get; set; }
         public string horario { get; set; }
