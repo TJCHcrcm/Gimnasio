@@ -18,6 +18,7 @@ namespace Gimnasio.Dominio.Entidades
 
         private Administrador()
         {
+
         }
 
         #endregion
